@@ -2,14 +2,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-class Student 
-	{
+class Student //defining user
+	{ 
+		//creating variables
 		private String studentId;
 		private String name;
 		private double feesPaid;
 		private double feesTotal;
 
-		public Student(String studentId, String name, double feesTotal) 
+		public Student(String studentId, String name, double feesTotal) //constructor with parameters
 			{
 			this.studentId = studentId;
 			this.name = name;
@@ -17,12 +18,12 @@ class Student
 			this.feesPaid = 0;
 			}
 
-		public void payFees(double fees) 
+		public void payFees(double fees) //logic to calculate fees paid
 			{
 			feesPaid += fees;
 			}
 
-		public double getRemainingFees() 
+		public double getRemainingFees() //logic to get remaining amount of fees
 			{
 			return feesTotal - feesPaid;
 			}
@@ -75,13 +76,14 @@ class FeesManagementSystem
     }
 }
 
+//main class 
 public class FeesManagementSystemApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         FeesManagementSystem feesManagementSystem = new FeesManagementSystem();
 
-        System.out.println("Welcome to the Fees Management System!");
+        System.out.println("hello...Welcome to the Fees Management System!");
 
         System.out.print("Enter student ID: ");
         String studentId = scanner.nextLine();
